@@ -68,7 +68,7 @@ const Auth = () => {
   }, [email, name, password, login]);
 
   return (
-    <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <div className="relative h-full w-full bg-[url('/images/page.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black w-full h-full lg:bg-opacity-50">
         <nav className="px-12 py-5">
           <img src="/images/logo.png" className="h-12" alt="Logo" />
@@ -107,9 +107,7 @@ const Auth = () => {
               {variant === 'login' ? 'Login' : 'Sign up'}
             </button>
             <div className="flex flex-row items-center gap-4 mt-8 justify-center">
-              <div onClick={() => signIn('google', { callbackUrl: '/profiles' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
-                <FcGoogle size={32} />
-              </div>
+              
               <div onClick={() => signIn('github', { callbackUrl: '/profiles' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
                 <FaGithub size={32} />
               </div>
